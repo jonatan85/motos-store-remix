@@ -1,0 +1,111 @@
+.motocicletas-grid {
+    display: grid;
+    grid-template-columns: 1 fr;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .motocicletas-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}    
+@media (min-width: 992px) {
+    .motocicletas-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.motocicleta {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.motocicleta .contenido {
+    padding: 1rem;
+}
+
+.img {
+    width: 40rem;
+    height: 25rem;
+}
+
+.motocicleta .contenido h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+.motocicleta .descripcion {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    font-size: 1.8rem;
+}
+
+.motocicleta .precio {
+    color: var(--primary);
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 900;
+}
+.motocicleta .enlace {
+    margin-top: 2rem;
+    display: block;
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    padding: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 900;
+    transition-property: background-color;
+    transition-duration: 3000ms;
+}
+.motocicleta .enlace:hover {
+    background-color: var(--primary);
+}
+
+.motocicletas-index {
+    display: grid;
+    grid-template-columns: 1 fr;
+    gap: 4rem;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.formulario label {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+.formulario select {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+}
+.formulario input[type='submit'] {
+    margin-top: 3rem;
+    background-color: var(--black);
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 1.4rem;
+    font-weight: 700;
+    border: none;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+.formulario input[type='submit']:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+}
